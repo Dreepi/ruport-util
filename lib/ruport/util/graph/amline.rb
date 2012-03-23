@@ -102,7 +102,7 @@ class Amline
   class UnknownOption < StandardError; end
 
   class BlankSlate
-    instance_methods.each { |m| undef_method m unless m =~ /^__/ }
+    instance_methods.each { |m| undef_method m unless m =~ /^__|object_id/ }
   end
 
   class HpricotTraverser < BlankSlate
